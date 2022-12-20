@@ -1,0 +1,160 @@
+.navbar-light .navbar-brand {
+    color:rgb(255, 255, 255);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    color: #833948;
+  }
+
+  .navbar-light .navbar-nav .nav-item .nav-link, .navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: #833948;
+  }
+
+  .navbar-toggler {
+    background:#833948;
+  }
+
+ .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-item .nav-link, .nav-item.dropdown .dropdown-item {
+    padding: .2rem 1rem;
+    color: #833948;
+  }
+
+  .nav-item.active .nav-link,.nav-link:focus{
+    color: #833948;
+  }
+
+.navbar-toggler {
+    padding: 1px 5px;
+    font-size: 18px;
+    line-height: 0.3;
+  }
+
+  .navbar-light .navbar-nav .nav-item .nav-link:focus, .navbar-light .navbar-nav .nav-item .nav-link:hover {
+    color: #833948;
+  }
+
+
+
+/****** search*******/
+
+ .search{
+    padding: 10px;
+    color: #eee;
+    background: linear-gradient(to bottom right, #B1227A, #429AEE);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+  }
+
+  .search :is(input,button){
+    color: inherit;
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+
+  .search_input{
+    width: 0;
+    transition: width .5s;
+
+  }
+
+ .search_btn{
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+  }
+
+  .search:focus-within input{
+    width: 200px;
+  }
+
+
+
+
+
+
+.hero
+{
+    height: 100%;
+    width: 100%;
+    background-image: url(images/back.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.bform-box
+{
+    width: 580px;
+    height: 530px;
+    position: relative;
+    margin: 2% auto;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 90px;
+    overflow: hidden;
+}
+
+.btitle{
+    color: white;
+    text-align: center;
+}
+
+.input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 6px;
+    resize: vertical;
+
+}
+
+.input[type="date"]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 6px;
+    resize: vertical;
+
+
+
+}
+
+::-webkit-calender-picker-indicator{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.label{
+    color: white;
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-top: 40px;
+}
+
+.submit-btn{
+    width: 50%;
+    margin-top: auto;
+    padding: 10px 50px;
+    cursor: pointer;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background:rgb(218,165,32) ;
+    border: none;
+    border-radius: 30px;
+
+}

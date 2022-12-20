@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+input{
+    display: none;
+}
+.container{
+    width: 100%;
+    text-align: center;
+
+}
+h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #833948;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+
+}
+
+@keyframes animate{
+0%{
+    width: 100px;
+}
+50%{
+    width: 200px;
+}
+100%{
+    width: 100px;
+}
+
+}
+.top-content{
+    background-color:#833948 ;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgb(163, 211, 241);
+
+}
+h3{
+    height: 100%;
+    background-color: #833948;
+    line-height: 60px;
+    padding: 0 50px;
+    color: rgb(250, 250, 250);
+
+}
+label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: rgb(7, 36, 54);
+    cursor: pointer;
+    transition: -5s;
+
+}
+label:hover{
+    color: white;
+
+}
+.photo-gallery{
+    width: 90%;
+    height: auto;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-inline-start: 70px;
+    padding-right: 0px;
+    grid-gap: 30px;
+}
+
+ .pic{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgb(92, 162, 185);
+    cursor: pointer;
+    transition: .5s;
+    grid: 10px;
+}
+.pic img{
+    width: 100%;
+    height:100%;
+    border-radius: 10px;
+
+}
+.pic::before{
+    content: "PHOTO GALLERY";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(48, 10, 10);
+    font-size: 18px;
+    font-weight: bold;
+    width:100% ;
+    margin-top: -100px;
+    opacity: 0;
+    transition:0.3s;
+    transition-delay: 0.2s;
+    z-index: 1;
+}
+.pic:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background-color: rgba(232, 231, 241, 0.925);
+    transition: .3s;
+
+}
+.pic:hover::after{
+    height: 100%;
+
+}
+.pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+
+}
+#check1:checked ~ .container .photo-gallery .pic{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+
+
+#check2:checked ~ .container .photo-gallery .engagement,
+#check3:checked ~ .container .photo-gallery .birthday{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: .5s;
+
+}
+

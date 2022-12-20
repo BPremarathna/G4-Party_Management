@@ -1,0 +1,293 @@
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .carousel-caption {
+    bottom: initial;
+    top: 60%;
+    transform: translateY(-60%);
+
+  }
+  
+  .carousel-caption h6 {
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+  }
+  
+  .carousel-caption p {
+    width: 75%;
+    margin: auto;
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 4px;
+    line-height: 1.2;
+  }
+  
+  .navbar-light .navbar-brand {
+    color:rgb(255, 255, 255);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    color: #833948;
+  }
+  
+  .navbar-light .navbar-nav .nav-item .nav-link, .navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: #833948;
+  }
+  
+  .navbar-toggler {
+    background:#833948;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .nav-item .nav-link, .nav-item.dropdown .dropdown-item {
+    padding: .2rem 1rem;
+    color: #833948;
+  }
+  
+  .nav-item.active .nav-link,.nav-link:focus{
+    color: #833948;
+  }
+  
+  .navbar-toggler {
+    padding: 1px 5px;
+    font-size: 18px;
+    line-height: 0.3;
+  }
+  
+  .navbar-light .navbar-nav .nav-item .nav-link:focus, .navbar-light .navbar-nav .nav-item .nav-link:hover {
+    color: #833948;
+  }
+  
+  .overlay{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+    position: absolute;
+    top: 0; 
+  }
+
+  .search{
+    padding: 10px;
+    color: #eee;
+    background: linear-gradient(to bottom right, #B1227A, #429AEE);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search :is(input,button){
+    color: inherit;
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+
+  .search_input{
+    width: 0;
+    transition: width .5s;
+
+  }
+
+  .search_btn{
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+  }
+
+  .search:focus-within input{
+    width: 200px;
+  }
+
+  ::placeholder{
+    color: inherit;
+  }
+
+  /*  services  */
+
+  .feature_section{
+    background: white;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    text-align: center;
+    padding-top: 50px;   
+  }
+
+  .feature_section, .services{
+    padding-top: 10px;
+  }
+
+  p{
+    width: 75%;
+    margin: auto;
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 3px;
+    line-height: 1.2;
+  }
+
+  h5{
+    color: #833948;
+  }
+
+ .card{
+  position: relative;
+  overflow: hidden;
+  padding-top: 10px;
+ }
+ 
+ .card::before{
+  position: absolute;
+  content: '';
+  width: 80%;
+  height: 200%;
+  background: #833948;
+  top: -50%;
+  left: -100%;
+  z-index: 1;
+  transform: rotate(25deg);
+  transform-origin: center top 0;
+  transition: .5s;
+ }
+
+ .card:hover::before{
+  left: 10%;
+ }
+
+ .card-text{
+  width: 100%;
+  padding: 0 20px;
+  position: absolute;
+  top: -50%;
+  color: #fff;
+  left: 0;
+  z-index: 2;
+  transition: 1.1s;
+ }
+
+ .card_text h3{
+  font-family: poppins;
+ }
+
+ .card:hover .card-text{
+  top: 100px;
+ }
+
+
+ /* choose-us */
+
+ .choose-us{
+  padding-top: 50px;
+  background: #f4f4f4;
+ }
+
+ .choose-us, .sec-title{
+  font-size: 20px;
+  color: black;
+  font-family: poppins;
+ }
+
+ .choose-us, .sec-detail{
+  font-size: 50px;
+  font-family: 'Dancing Script', cursive;
+  color: #833948;
+ }
+
+ .choose-us, .list-item{
+  font-size: 30px;
+  color: black;
+  font-family:'Teko', sans-serif;
+  text-align: justify;
+ }
+
+
+ /* contact us */
+
+ .contact-us{
+  padding-top: 70px;
+  background: #833948;
+ }
+
+.contact-us, .con-details{
+  padding-top: 7px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 70px;
+}
+
+.contact-us, .btn-dark{
+  padding-top: 20px;
+}
+
+
+/* footer */
+
+#footer-area{
+  padding: 40px 0 60px 0;
+  background: #fff;
+  background-size: contain;
+}
+  
+.single-footer h5{
+  font-size: 20px;
+  font-family: poppins;
+  text-align: left;
+}
+
+.single-footer h6{
+  font-size: 16px;
+  font-family: 'Dancing Script', cursive;
+  text-align: left;
+}
+
+.single-footer p{
+  font-size: 12px;
+  font-family: sans-serif;
+  margin-left: 2px;
+  text-align: left;
+}
+
+.single-footer2 h5{
+  text-align: right;
+  font-size: 20px;
+  font-family: poppins;
+}
+
+.link-area{
+  padding: 0;
+}
+
+.link-area li{
+  padding: 5px 5px 5px 0;
+  list-style: none;
+  text-align: right;
+}
+
+.footer, .copyright-area{
+  background: #833948; 
+}
+
+.footer, .copyright-area p{
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: poppins;
+}

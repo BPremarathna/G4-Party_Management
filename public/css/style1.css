@@ -1,0 +1,257 @@
+.navbar-light .navbar-brand {
+    color:rgb(255, 255, 255);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    color: #833948;
+  }
+
+  .navbar-light .navbar-nav .nav-item .nav-link, .navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: #833948;
+  }
+
+  .navbar-toggler {
+    background:#833948;
+  }
+
+ .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-item .nav-link, .nav-item.dropdown .dropdown-item {
+    padding: .2rem 1rem;
+    color: #833948;
+  }
+
+  .nav-item.active .nav-link,.nav-link:focus{
+    color: #833948;
+  }
+
+.navbar-toggler {
+    padding: 1px 5px;
+    font-size: 18px;
+    line-height: 0.3;
+  }
+
+  .navbar-light .navbar-nav .nav-item .nav-link:focus, .navbar-light .navbar-nav .nav-item .nav-link:hover {
+    color: #833948;
+  }
+
+
+
+/****** search*******/
+
+ .search{
+    padding: 10px;
+    color: #eee;
+    background: linear-gradient(to bottom right, #B1227A, #429AEE);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+  }
+
+  .search :is(input,button){
+    color: inherit;
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+
+  .search_input{
+    width: 0;
+    transition: width .5s;
+
+  }
+
+ .search_btn{
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+  }
+
+  .search:focus-within input{
+    width: 200px;
+  }
+.hero-image{
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.hero-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Oswald', sans-seri;
+    font-size: 100px;
+
+}
+.container .row  .col-12 .hotel1{
+  font-size: 2rem;
+  color: #833948;
+}
+.contact-area{
+  list-style: none;
+  text-align: left;
+  font-size: 15px;
+  color:black;
+  white-space: none;
+  display: inline-block;
+}
+.container1{
+    box-sizing: border-box;
+    margin: 20px;
+}
+.row ::after{
+  content: "";
+  display: table;
+  clear: both;
+
+}
+.column{
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+images{
+  width: 250px;
+  height: 200px;
+}
+.cinnamonpara{
+  margin: 40px;
+  text-align: left;
+  display: flex;
+}
+
+section{
+  padding: 4rem 9%;
+}
+section{
+  background-color: #eee;
+}
+
+.home  .display-container h5{
+  color: #B1127A;
+  font-size: 1.5rem;
+}
+
+.box1{
+  color: black;
+  font-size: medium;
+  padding: 4rem 0;
+  line-height: 1.5;
+}
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.5rem;
+  color:white;
+  background:linear-gradient(to bottom right, #B1227A, #429AEE);
+  border-radius: .5rem;
+  cursor: pointer;
+  padding: 8rem 3rem;
+}
+.btn:hover{
+  background: #429AEE;
+  letter-spacing: .1rem;
+}
+  /*******menu******/
+
+.sub-heading{
+  text-align :"center";
+  color:#833948;
+  font-size :2.5rem;
+  padding-top: 1rem;
+}
+
+.menu  .box-container{
+  display:grid;
+  grid-template-columns : repeat(auto-fit ,minmax(27rem,1fr));
+  gap: 1.5rem;
+
+}
+
+.menu  .box-container .box{
+  padding: 2.5rem;
+  background: #eee;
+  border-radius: 0.5rem;
+  border: 0.2rem solid rgba(188, 22,22, 0.2);
+  box-shadow: var(--box-shadow);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+input[type="text"] {
+
+  width: 25px;
+  }
+
+/***footer area***/
+
+#footer-area{
+  padding: 40px 0 60px 0;
+  background: #fff;
+  background-size: contain;
+}
+
+.single-footer h5{
+  font-size: 20px;
+  font-family: poppins;
+  text-align: left;
+  color: #833948;
+}
+
+.single-footer h6{
+  font-size: 16px;
+  font-family: 'Dancing Script', cursive;
+  text-align: left;
+}
+
+.single-footer p{
+  font-size: 12px;
+  font-family: sans-serif;
+  margin-left: 2px;
+  text-align: left;
+}
+
+.single-footer2 h5{
+  text-align: right;
+  font-size: 20px;
+  font-family: poppins;
+  color: #833948;
+}
+
+.link-area{
+  padding: 0;
+}
+
+.link-area li{
+  padding: 5px 5px 5px 0;
+  list-style: none;
+  text-align: right;
+}
+
+.footer, .copyright-area{
+  background: #833948;
+}
+
+.footer, .copyright-area p{
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: poppins;
+}
