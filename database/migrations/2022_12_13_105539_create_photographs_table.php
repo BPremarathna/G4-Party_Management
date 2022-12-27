@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('photographs', function (Blueprint $table) {
             $table->id();
             $table->string('package');
-            $table->string('price');
+            $table->string('description');
+            $table->string('unitPrice');
+            $table->string('photoImage');
             $table->foreignId('suppliers_id')->constrained('suppliers');
             $table->timestamps();
         });

@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('cakeName');
             $table->string('description');
-            $table->string('price');
+            $table->string('unitPrice');
+            $table->string('cakeImage');
             $table->foreignId('suppliers_id')->constrained('suppliers');
             $table->timestamps();
         });

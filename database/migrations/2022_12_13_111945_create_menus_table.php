@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('menuName');
             $table->string('type');
-            $table->string('price');
+            $table->string('description');
+            $table->string('unitPrice');
+            $table->string('menuImage');
             $table->foreignId('venues_id')->constrained('venues');
             $table->timestamps();
         });

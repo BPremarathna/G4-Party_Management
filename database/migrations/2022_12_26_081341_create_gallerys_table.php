@@ -13,14 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('halls', function (Blueprint $table) {
+        Schema::create('gallerys', function (Blueprint $table) {
             $table->id();
-            $table->string('hallName');
-            $table->integer('capacity');
-            $table->string('unitPrice');
-            $table->string('description');
-            $table->string('hallImage');
-            $table->foreignId('venues_id')->constrained('venues');
+            $table->string('category');
+            $table->string('galleryImage');
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('halls');
+        Schema::dropIfExists('gallerys');
     }
 };

@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Photograph extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'photoImage'
+    ];
 
     public function supplier()
     {

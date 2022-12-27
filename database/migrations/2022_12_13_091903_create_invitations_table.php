@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('invitations', function (Blueprint $table) {
             $table->id();
             $table->string('type');
-            $table->string('price');
+            $table->string('unitPrice');
+            $table->string('cardImage');
             $table->foreignId('suppliers_id')->constrained('suppliers');
             $table->timestamps();
         });

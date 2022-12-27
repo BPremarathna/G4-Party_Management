@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('decorations', function (Blueprint $table) {
             $table->id();
+            $table->string('decoName');
             $table->string('description');
-            $table->string('price');
+            $table->string('unitPrice');
+            $table->string('decoImage');
             $table->foreignId('suppliers_id')->constrained('suppliers');
             $table->timestamps();
         });

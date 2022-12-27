@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('entertainments', function (Blueprint $table) {
             $table->id();
             $table->string('category');
-            $table->string('price');
+            $table->string('unitPrice');
+            $table->string('bandImage');
             $table->foreignId('suppliers_id')->constrained('suppliers');
             $table->timestamps();
         });

@@ -5,17 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cake extends Model
+class Cart extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'cakeImage'
-    ];
-
-    public function supplier()
+    public function customer()
     {
-        return $this->belongsTo(Supplier::class);
+        return $this->belongsTo(Customer::class);
     }
-
 }

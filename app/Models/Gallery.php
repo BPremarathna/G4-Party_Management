@@ -5,17 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cake extends Model
+class Gallery extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'cakeImage'
+        'galleryImage'
     ];
-
-    public function supplier()
-    {
-        return $this->belongsTo(Supplier::class);
-    }
-
 }

@@ -13,4 +13,9 @@ class Customer extends Model
     {
         return $this->hasOne(User::class);
     }
+
+    public function cart()
+    {
+        return $this->hasOne(cart::class);
+    }
 }

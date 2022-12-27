@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Decoration extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'decoImage'
+    ];
 
     public function supplier()
     {

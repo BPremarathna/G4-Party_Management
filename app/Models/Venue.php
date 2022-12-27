@@ -8,11 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Venue extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'venueImage'
+    ];
 
     public function supplier()
     {
         return $this->belongsTo(Supplier::class);
     }
 
-    
+
 }

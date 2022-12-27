@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Hall extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'hallImage'
+    ];
 
     public function venue()
     {
