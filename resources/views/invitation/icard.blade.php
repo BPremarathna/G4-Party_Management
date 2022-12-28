@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/cardstyle.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/button1.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
@@ -221,6 +222,18 @@
       <br>
       <a href="#" class="btn"><b>Add to Cart</b></a>
     </div>
+
+    <button  onclick="myOnclickFn()"  class="button" >
+        <span class="button-text">Custom</span>
+        <span class="button-icon"><br>
+        <ion-icon name="add-outline"></ion-icon></span>
+    </button>
+    <script>
+        function myOnclickFn(){
+          document.location.href="{{route('custom')}}";
+        }
+    </script>
+
     </div>
     </section>
 
@@ -374,6 +387,17 @@
         <br>
         <a href="#" class="btn"><b>Add to Cart</b></a>
       </div>
+
+      <button  onclick="myOnclickFn()"  class="button" >
+        <span class="button-text">Custom</span>
+        <span class="button-icon"><br>
+        <ion-icon name="add-outline"></ion-icon></span>
+    </button>
+    <script>
+        function myOnclickFn(){
+          document.location.href="{{route('custom')}}";
+        }
+      </script>
     </div>
   </section>
 

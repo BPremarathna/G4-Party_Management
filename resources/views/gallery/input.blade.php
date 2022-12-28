@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="hero">
-        <form action="" method="get">
+        <form action="" method="post">
             @csrf
             <div class="row">
                 <div class="input-group">
@@ -24,9 +24,10 @@
                     <label>Choose an Image: </label><br><br>
                     <input type="file" name="galleryImage" id="image" required><br>
                 </div>
+            </div>
                 <br>
                 <button type="submit"><i class="fa-sharp fa-solid fa-paper-plane"></i>Submit</button>
-            </div>
+
         </form>
     </div>
 

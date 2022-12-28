@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class EntertainmentController extends Controller
 {
     //
-    public function input(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'category' => 'required' ,
@@ -31,7 +31,7 @@ class EntertainmentController extends Controller
 
         $entertainment->save();
 
-        return redirect()->route('decoration.input')->width('success', 'Decoration Added Successfully');
+        return redirect()->route('entertain.input')->width('success', 'Entertainment-Band Added Successfully');
         dd($request);
     }
 }

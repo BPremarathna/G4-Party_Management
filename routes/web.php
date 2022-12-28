@@ -57,6 +57,10 @@ Route::get('/invitationcards', function () {
     return view('invitation/icard');
 })->name('icard');
 
+Route::get('/customtool', function () {
+    return view('invitation/custom');
+})->name('custom');
+
 Route::get('/decoration', function () {
     return view('decoration/decoration');
 })->name('decoration');
@@ -69,7 +73,13 @@ Route::get('/bookingstart', function () {
     return view('booking/booking');
 })->name('booking');
 
+Route::get('/galleryinput', function () {
+    return view('gallery/input');
+})->name('input');
 
+Route::get('/cakeinput', function () {
+    return view('cake/input');
+})->name('input');
 
 
 

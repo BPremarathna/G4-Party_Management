@@ -16,17 +16,6 @@
             @csrf
             <div class="row">
                 <div class="input-group">
-                    <input type="text" id="name" name="cakeName" required>
-                    <label for="name">Cake Name</label>
-                </div>
-                <div class="input-group">
-                    <input type="text" id="price" name="unitPrice" required>
-                    <label for="price">Price</label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-group">
                     <textarea  id="message" name="description" rows="3" required></textarea>
                     <label for="message">Description</label>
                 </div>
@@ -35,7 +24,7 @@
             <div class="row">
                 <div class="input-group">
                     <label>Choose an Image: </label><br><br>
-                    <input type="file" name="cakeImage" id="image" required><br>
+                    <input type="file" name="venueImage" id="image" required><br>
                 </div>
             </div>
             <br>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +17,19 @@
             @csrf
             <div class="row">
                 <div class="input-group">
-                    <input type="text" id="name" name="cakeName" required>
-                    <label for="name">Cake Name</label>
+                    <input type="text" id="name" name="hallName" required>
+                    <label for="name">Hall Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="capacity" name="capacity" required>
+                    <label for="capacity">Capacity</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <textarea  id="message" name="description" rows="3" required></textarea>
+                    <label for="message">Description</label>
                 </div>
                 <div class="input-group">
                     <input type="text" id="price" name="unitPrice" required>
@@ -27,15 +39,8 @@
 
             <div class="row">
                 <div class="input-group">
-                    <textarea  id="message" name="description" rows="3" required></textarea>
-                    <label for="message">Description</label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-group">
                     <label>Choose an Image: </label><br><br>
-                    <input type="file" name="cakeImage" id="image" required><br>
+                    <input type="file" name="hallImage" id="image" required><br>
                 </div>
             </div>
             <br>

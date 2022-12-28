@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class DecorationController extends Controller
 {
     //
-    public function input(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'decoName' => 'required' ,

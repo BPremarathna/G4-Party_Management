@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class CakeController extends Controller
 {
     //
-    public function input(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'cakeName' => 'required' ,

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('suppliers_id')->constrained('suppliers');
             $table->foreignId('suppliers_companyName')->constrained('suppliers');
+            $table->string('description');
             $table->string('venueImage');
             $table->timestamps();
         });

@@ -13,7 +13,8 @@
         <div class="hero">
 
 
-        <form>
+        <form action="" method="post">
+            @csrf
             <h1> CONTACT WITH US </h1>  <br>
             <p> Drop Us A Message (24*7 Support) </p><br>
             <div class="row">

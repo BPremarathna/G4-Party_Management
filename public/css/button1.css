@@ -1,0 +1,37 @@
+.button{
+    display:inline-block;
+    height: 50px;
+    width:150px;
+    padding:0;
+    background:rgb(150, 150, 231);
+    border: none;
+    outline:none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.button:hover{
+    background: rgb(115, 115, 221);
+}
+.button:active{
+    background: rgb(66, 66, 226);
+}
+.button-text,
+.button-icon{
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24 px;
+    color: rgb(2, 2, 12);
+    height: 100%;
+
+}
+.button-icon{
+    font-size: 1.5em;
+
+
+}
+
+

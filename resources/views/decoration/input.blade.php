@@ -12,7 +12,7 @@
 
 <body>
     <div class="hero">
-        <form action="" method="get">
+        <form action="" method="post">
             @csrf
             <div class="row">
                 <div class="input-group">
