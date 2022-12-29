@@ -81,6 +81,10 @@ Route::get('/cakeinput', function () {
     return view('cake/cakeinput');
 })->name('cakeinput');
 
+Route::get('/admindb', function () {
+    return view('admin/index');
+})->name('index');
+
 
 
 
