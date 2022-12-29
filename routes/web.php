@@ -74,12 +74,12 @@ Route::get('/bookingstart', function () {
 })->name('booking');
 
 Route::get('/galleryinput', function () {
-    return view('gallery/input');
-})->name('input');
+    return view('gallery/galleryinput');
+})->name('galleryinput');
 
 Route::get('/cakeinput', function () {
-    return view('cake/input');
-})->name('input');
+    return view('cake/cakeinput');
+})->name('cakeinput');
 
 
 
@@ -94,3 +94,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
 });
+
+Route::post('store',[App\Http\Controllers\GalleryController::class,'store']);
+

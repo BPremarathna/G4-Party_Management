@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use DB;
 
 class GalleryController extends Controller
 {
@@ -17,7 +18,7 @@ class GalleryController extends Controller
 
         $gallery = new Gallery;
 
-        // $gallery->galleryImage=$request->galleryImage;
+        $gallery->galleryImage=$request->galleryImage;
         $gallery->category = $request->category;
 
         if($galleryImage = $request->file('image')){
@@ -29,7 +30,7 @@ class GalleryController extends Controller
 
         $gallery->save();
 
-        return redirect()->route('gallery.input')->width('success', 'Gallery Added Successfully');
-        dd($request);
+        return redirect()->route('galleryinput')->with('success', 'Gallery Added Successfully');
+
     }
 }
