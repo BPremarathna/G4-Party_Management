@@ -33,7 +33,7 @@ class CakeController extends Controller
 
         $cake->save();
 
-        return redirect()->route('cake.input')->width('success', 'Cake Added Successfully');
+        return redirect()->route('cake.input')->with('success', 'Cake Added Successfully');
         dd($request);
     }
 }

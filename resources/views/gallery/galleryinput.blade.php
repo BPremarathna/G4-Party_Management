@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="hero">
-        <form action="" method="post">
+        <form action="store" method="post">
             @csrf
             <div class="row">
                 <div class="input-group">
