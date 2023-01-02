@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap1.min.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
+    <script src="https://kit.fontawesome.com/9c1531a844.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="page-top">
@@ -21,21 +22,18 @@
                 <ul class="navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link active" href=""><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('welcome') }}"><i class="fa-light fa-house-heart"></i><span>Home Page</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"><i class="far fa-user-circle"></i><span>Login</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('register') }}"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-table"></i><span>Booking</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href=""><i class="fa-light fa-users"></i><span>Users</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href=""><i class="fa-light fa-users"></i><span>Venue</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href=""><i class="fa-light fa-users"></i><span>Decoration</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href=""><i class="fa-light fa-users"></i><span>Invitation</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href=""><i class="fa-light fa-users"></i><span>cake</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href=""><i class="fa-light fa-users"></i><span>Entertainment</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href=""><i class="fa-light fa-users"></i><span>Photography</span></a></li>
-
-
-
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-table"></i><span>Booking</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-light fa-users"></i><span>Users</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-light fa-hotel"></i><span>Venue</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-regular fa-lights-holiday"></i><span>Decoration</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-light fa-cards"></i><span>Invitation</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-light fa-cake-slice"></i><span>cake</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-light fa-speakers"></i><span>Entertainment</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-light fa-camera-movie"></i><span>Photography</span></a></li>
                 </ul>
+
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
         </nav>
