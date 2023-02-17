@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SupplierController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,6 +86,9 @@ Route::get('/admindb', function () {
     return view('admin/index');
 })->name('index');
 
+Route::get('/addsupplier', function () {
+    return view('admin/addsupplier');
+})->name('addsupplier');
 
 
 
@@ -101,3 +105,4 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::post('store',[App\Http\Controllers\GalleryController::class,'store']);
 
+Route::post('store',[App\Http\Controllers\SupplierController::class,'store']);

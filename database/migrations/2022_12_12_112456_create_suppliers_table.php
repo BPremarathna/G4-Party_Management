@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('address');
             $table->string('companyName');
-            $table->foreignId('users_id')->constrained('users');
+        
             $table->timestamps();
         });
     }
