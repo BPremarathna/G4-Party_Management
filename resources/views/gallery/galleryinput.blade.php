@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/constyle.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <script src="https://kit.fontawesome.com/b3fcdde4bf.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9c1531a844.js" crossorigin="anonymous"></script>
     <title>DREAM | PARTY PLANNING</title>
 </head>
 <body>
@@ -27,6 +28,10 @@
             </div>
                 <br>
                 <button type="submit"><i class="fa-sharp fa-solid fa-paper-plane"></i>Submit</button>
+                <br>
+                <br>
+
+                <input type="button" value="Back" onclick="history.back()">
 
         </form>
     </div>

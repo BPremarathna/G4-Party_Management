@@ -6,6 +6,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\GalleryController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -74,10 +76,6 @@ Route::get('/bookingstart', function () {
     return view('booking/booking');
 })->name('booking');
 
-Route::get('/galleryinput', function () {
-    return view('gallery/galleryinput');
-})->name('galleryinput');
-
 Route::get('/cakeinput', function () {
     return view('cake/cakeinput');
 })->name('cakeinput');
@@ -86,9 +84,14 @@ Route::get('/admindb', function () {
     return view('admin/index');
 })->name('index');
 
+
 Route::get('/addsupplier', function () {
     return view('admin/addsupplier');
 })->name('addsupplier');
+
+//Route::get('/galleryManagement', f[App\Http\Controllers\GalleryController::class,'store'])->name('galleryshow');
+
+
 
 
 
@@ -105,4 +108,13 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::post('store',[App\Http\Controllers\GalleryController::class,'store']);
 
+
 Route::post('store',[App\Http\Controllers\SupplierController::class,'store']);
+
+Route::get('/galleryManagement', [App\Http\Controllers\GalleryController::class, 'index'])->name('galleryshow');
+Route::get('/galleryinput', [App\Http\Controllers\GalleryController::class,'create'])->name('galleryinput');
+Route::get('show/{gallery}', [App\Http\Controllers\GalleryController::class,'show'])->name('show');
+Route::get('edit/{gallery}', [App\Http\Controllers\GalleryController::class,'edit'])->name('edit');
+Route::put('edit/{gallery}', [App\Http\Controllers\GalleryController::class,'update'])->name('update');
+Route::delete('/{gallery}', [App\Http\Controllers\GalleryController::class,'destroy'])->name('destroy');
+
