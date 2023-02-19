@@ -20,10 +20,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Show Gallery </h2>
+                <h2>Show Supplier </h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('galleryshow') }}">Back</a>
+                <a class="btn btn-primary" href="{{ route('suppliershow') }}">Back</a>
             </div>
         </div>
     </div>
@@ -31,22 +31,50 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Category:</strong>
-                {{ $gallery->category }}
+                <strong>First Name:</strong>
+                {{ $supplier->firstName }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Image:</strong>
-                <img src="/images/{{ $gallery->galleryImage }}" width="200px">
+                <strong>Last Name:</strong>
+                {{ $supplier->lastName }}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Mobile:</strong>
+                {{ $supplier->mobile }}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Email:</strong>
+                {{ $supplier->email }}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Address:</strong>
+                {{ $supplier->address }}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Company Name:</strong>
+                {{ $supplier->companyName }}
             </div>
         </div>
     </div>
+
+
+
+
+
 </body>
 </html>
-
-
-
-
-

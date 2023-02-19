@@ -86,7 +86,7 @@ Route::get('/admindb', function () {
 
 
 Route::get('/addsupplier', function () {
-    return view('admin/addsupplier');
+    return view('supplier/addsupplier');
 })->name('addsupplier');
 
 //Route::get('/galleryManagement', f[App\Http\Controllers\GalleryController::class,'store'])->name('galleryshow');
@@ -118,3 +118,7 @@ Route::get('edit/{gallery}', [App\Http\Controllers\GalleryController::class,'edi
 Route::put('edit/{gallery}', [App\Http\Controllers\GalleryController::class,'update'])->name('update');
 Route::delete('/{gallery}', [App\Http\Controllers\GalleryController::class,'destroy'])->name('destroy');
 
+
+Route::get('/supplierManagement', [App\Http\Controllers\SupplierController::class, 'index'])->name('suppliershow');
+Route::get('/addsupplier', [App\Http\Controllers\SupplierController::class,'create'])->name('addsupplier');
+Route::get('show/{supplier}', [App\Http\Controllers\SupplierController::class,'show'])->name('supplier.show');

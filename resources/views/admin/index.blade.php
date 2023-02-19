@@ -26,7 +26,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('register') }}"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-table"></i><span>Booking</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}"><i class="fa-light fa-users"></i><span>Users</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-light fa-users"></i><span>Suppliers</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('suppliershow') }}"><i class="fa-light fa-users"></i><span>Suppliers</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fa-light fa-hotel"></i><span>Venue</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fa-regular fa-lights-holiday"></i><span>Decoration</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fa-light fa-cards"></i><span>Invitation</span></a></li>

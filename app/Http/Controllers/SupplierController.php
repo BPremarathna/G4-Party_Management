@@ -24,7 +24,7 @@ class SupplierController extends Controller
 
             $supplier->firstName = $request->firstName;
             $supplier->lastName = $request->lastName;
-            $supplier->mobile = $request->mobile; 
+            $supplier->mobile = $request->mobile;
             $supplier->email = $request->email;
             $supplier->address = $request->address;
             $supplier->companyName = $request->companyName;
@@ -32,6 +32,29 @@ class SupplierController extends Controller
             $supplier->save();
 
         return redirect()->route('addsupplier')->with('success', 'Suppliers Added Successfully');
-}
+    }
+
+    public function index() {
+        $data = Supplier::latest()->paginate(25);
+        //dd($data);
+        return view('supplier/suppliershow', compact('data'))->with('i', (request()->input('page', 1) - 1) * 25);
+
+    }
+
+    public function create(){
+        return view('supplier.addsupplier');
+    }
+
+    public function show (Supplier $supplier){
+        return view('supplier.show', compact('supplier'));
+
+    }
+
+
+
+
+
+
+
 
 }
