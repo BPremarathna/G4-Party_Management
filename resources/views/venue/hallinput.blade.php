@@ -13,7 +13,7 @@
 
 <body>
     <div class="hero">
-        <form action="" method="post">
+        <form action="store" method="post">
             @csrf
             <div class="row">
                 <div class="input-group">
@@ -39,8 +39,12 @@
 
             <div class="row">
                 <div class="input-group">
+                    <input type="text" id="vname" name="venueName" required>
+                    <label for="vname">Name of Hotel</label>
+                </div>
+                <div class="input-group">
                     <label>Choose an Image: </label><br><br>
-                    <input type="file" name="hallImage" id="image" required><br>
+                    <input type="file" name="hallImage" id="image"><br>
                 </div>
             </div>
             <br>

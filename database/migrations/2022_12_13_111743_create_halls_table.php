@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('unitPrice');
             $table->string('description');
             $table->string('hallImage');
-            $table->foreignId('venues_id')->constrained('venues');
+            $table->string('venueName');
             $table->timestamps();
         });
     }

@@ -6,6 +6,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\CakeController;
+use App\Http\Controllers\VenueController;
+use App\Http\Controllers\HallController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,6 +77,15 @@ Route::get('/bookingstart', function () {
     return view('booking/booking');
 })->name('booking');
 
+Route::get('/venueinput', function () {
+    return view('venue/venueinput');
+})->name('venueinput');
+
+Route::get('/hallinput', function () {
+    return view('venue/hallinput');
+})->name('hallinput');
+
+
 Route::get('/galleryinput', function () {
     return view('gallery/galleryinput');
 })->name('galleryinput');
@@ -95,6 +107,7 @@ Route::get('/addsupplier', function () {
 
 
 
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -106,3 +119,9 @@ Route::group(['middleware' => ['auth']], function () {
 Route::post('store',[App\Http\Controllers\GalleryController::class,'store']);
 
 Route::post('store',[App\Http\Controllers\SupplierController::class,'store']);
+
+Route::post('store',[App\Http\Controllers\CakeController::class,'store']);
+
+Route::post('store',[App\Http\Controllers\VenueController::class,'store']);
+
+Route::post('store',[App\Http\Controllers\HallController::class,'store']);

@@ -9,11 +9,11 @@ class Hall extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'hallImage'
+        'hallName','capacity','unitPrice','description','hallImage','venueName'
     ];
 
-    public function venue()
+    /*public function venue()
     {
         return $this->hasMeny(Venue::class);
-    }
+    }*/
 }
