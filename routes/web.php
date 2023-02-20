@@ -7,7 +7,9 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\GalleryController;
-
+use App\Http\Controllers\DecorationController;
+use App\Http\Controllers\EntertainmentController;
+use App\Http\Controllers\CakeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -107,9 +109,10 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Route::post('store',[App\Http\Controllers\GalleryController::class,'store']);
-
-
 Route::post('store',[App\Http\Controllers\SupplierController::class,'store']);
+Route::post('/store1',[App\Http\Controllers\DecorationController::class,'store']);
+Route::post('/store2',[App\Http\Controllers\EntertainmentController::class,'store']);
+Route::post('/store4',[App\Http\Controllers\CakeController::class,'store']);
 
 Route::get('/galleryManagement', [App\Http\Controllers\GalleryController::class, 'index'])->name('galleryshow');
 Route::get('/galleryinput', [App\Http\Controllers\GalleryController::class,'create'])->name('galleryinput');
@@ -122,3 +125,16 @@ Route::delete('/{gallery}', [App\Http\Controllers\GalleryController::class,'dest
 Route::get('/supplierManagement', [App\Http\Controllers\SupplierController::class, 'index'])->name('suppliershow');
 Route::get('/addsupplier', [App\Http\Controllers\SupplierController::class,'create'])->name('addsupplier');
 Route::get('show/{supplier}', [App\Http\Controllers\SupplierController::class,'show'])->name('supplier.show');
+
+Route::get('/decoinput', [App\Http\Controllers\DecorationController::class,'create'])->name('decoinput');
+Route::get('/decoManagement', [App\Http\Controllers\DecorationController::class, 'index'])->name('decoshow');
+Route::get('show1/{decoration}', [App\Http\Controllers\DecorationController::class,'show'])->name('show1');
+
+Route::get('/entertaininput', [App\Http\Controllers\EntertainmentController::class,'create'])->name('entertaininput');
+Route::get('/entertainManagement', [App\Http\Controllers\EntertainmentController::class, 'index'])->name('entertainshow');
+Route::get('show2/{entertain}', [App\Http\Controllers\EntertainmentController::class,'show'])->name('show2');
+
+
+Route::get('/cakeinput', [App\Http\Controllers\CakeController::class,'create'])->name('cakeinput');
+Route::get('/cakeManagement', [App\Http\Controllers\CakeController::class, 'index'])->name('cakeshow');
+Route::get('show4/{cake}', [App\Http\Controllers\CakeController::class,'show'])->name('show4');

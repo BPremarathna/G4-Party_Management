@@ -12,7 +12,7 @@
 
 <body>
     <div class="hero">
-        <form action="" method="post">
+        <form action="/store1" method="post" >
             @csrf
             <div class="row">
                 <div class="input-group">
@@ -33,8 +33,22 @@
             </div>
 
             <div class="row">
+
                 <div class="input-group">
-                    <label>Choose an Image: </label><br><br>
+                    <label for="suppliers_id">Company Name</label>
+                    <br>
+                    <br>
+                    <select class="form-control" name="suppliers_id" id="suppliers_id">
+                        @foreach($sup as $c)
+                         <option value="{{ $c->id }}">{{ $c->companyName }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <label>Choose an Image </label><br><br>
                     <input type="file" name="decoImage" id="image" required><br>
                 </div>
             </div>

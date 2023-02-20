@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Decoration extends Model
 {
     use HasFactory;
+    protected $guarded = [];
     protected $fillable = [
-        'decoImage'
+        'decoImage','description','decoName','unitPrice','suppliers_id','companyName'
     ];
 
     public function supplier()

@@ -12,7 +12,7 @@
 
 <body>
     <div class="hero">
-        <form action="" method="post">
+        <form action="/store2" method="post">
             @csrf
             <div class="row">
                 <div class="input-group">
@@ -26,11 +26,28 @@
             </div>
 
             <div class="row">
+                    <div class="input-group">
+                        <input type="text" id="bandname" name="bandName" required>
+                        <label for="bandname">Band Name</label>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Company Name</label><br><br>
+                        <select class="form-control" name="suppliers_id" id="suppliers_id">
+                            @foreach($sup as $c)
+                            <option value="{{ $c->id }}">{{ $c->companyName }}</option>
+                        @endforeach
+                        </select>
+                    </div>
+            </div>
+
+            <div class="row">
                 <div class="input-group">
                     <label>Choose an Image: </label><br><br>
                     <input type="file" name="bandImage" id="image" required><br>
                 </div>
             </div>
+
             <br>
             <button type="submit"><i class="fa-sharp fa-solid fa-paper-plane"></i>Submit</button>
         </form>
