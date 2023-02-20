@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('category');
             $table->string('unitPrice');
+            $table->string('bandName');
             $table->string('bandImage');
             $table->foreignId('suppliers_id')->constrained('suppliers');
             $table->timestamps();
