@@ -32,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fa-light fa-cards"></i><span>Invitation</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('cakeshow') }}"><i class="fa-light fa-cake-slice"></i><span>cake</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('entertainshow') }}"><i class="fa-light fa-speakers"></i><span>Entertainment</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-light fa-camera-movie"></i><span>Photography</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('photoshow') }}"><i class="fa-light fa-camera-movie"></i><span>Photography</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('galleryshow') }}"><i class="fa-light fa-users"></i><span>Gallery</span></a></li>
                 </ul>
 
