@@ -116,6 +116,7 @@ Route::post('/store2',[App\Http\Controllers\EntertainmentController::class,'stor
 Route::post('/store4',[App\Http\Controllers\CakeController::class,'store']);
 Route::post('/store5',[App\Http\Controllers\PhotographController::class,'store']);
 Route::post('/store6',[App\Http\Controllers\InvitationController::class,'store']);
+Route::post('/store7',[App\Http\Controllers\VenueController::class,'store']);
 
 Route::get('/galleryManagement', [App\Http\Controllers\GalleryController::class, 'index'])->name('galleryshow');
 Route::get('/galleryinput', [App\Http\Controllers\GalleryController::class,'create'])->name('galleryinput');
@@ -149,4 +150,8 @@ Route::get('show5/{photograph}', [App\Http\Controllers\PhotographController::cla
 Route::get('/cardinput', [App\Http\Controllers\InvitationController::class,'create'])->name('cardinput');
 Route::get('/cardManagement', [App\Http\Controllers\InvitationController::class, 'index'])->name('cardshow');
 Route::get('show6/{invitation}', [App\Http\Controllers\InvitationController::class,'show'])->name('show6');
+
+Route::get('/venueinput', [App\Http\Controllers\VenueController::class,'create'])->name('venueinput');
+Route::get('/venueManagement', [App\Http\Controllers\VenueController::class, 'index'])->name('venueshow');
+Route::get('show7/{venue}', [App\Http\Controllers\VenueController::class,'show'])->name('show7');
 

@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('halls', function (Blueprint $table) {
             $table->id();
             $table->string('hallName');
+            $table->string('description');
             $table->integer('capacity');
             $table->string('unitPrice');
-            $table->string('description');
             $table->string('hallImage');
             $table->foreignId('venues_id')->constrained('venues');
             $table->timestamps();

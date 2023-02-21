@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('venues', function (Blueprint $table) {
             $table->id();
             $table->foreignId('suppliers_id')->constrained('suppliers');
-            $table->foreignId('suppliers_companyName')->constrained('suppliers');
-            $table->string('description');
+            $table->string('venueName');
+            $table->string('location');
             $table->string('venueImage');
             $table->timestamps();
         });
