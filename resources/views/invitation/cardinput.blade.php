@@ -12,7 +12,7 @@
 
 <body>
     <div class="hero">
-        <form action="" method="post">
+        <form action="/store6" method="post">
             @csrf
             <div class="row">
                 <div class="input-group">
@@ -22,6 +22,20 @@
                 <div class="input-group">
                     <input type="text" id="price" name="unitPrice" required>
                     <label for="price">Price</label>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="input-group">
+                    <label for="suppliers_id">Company Name</label>
+                    <br>
+                    <br>
+                    <select class="form-control" name="suppliers_id" id="suppliers_id">
+                        @foreach($sup as $c)
+                         <option value="{{ $c->id }}">{{ $c->companyName }}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
 

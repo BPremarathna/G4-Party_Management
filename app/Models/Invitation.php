@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Invitation extends Model
 {
     use HasFactory;
+    protected $guarded = [];
     protected $fillable = [
-        'cardImage'
+        'cardImage','type','unitPrice','suppliers_id','companyName'
     ];
 
     public function supplier()
