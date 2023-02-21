@@ -41,7 +41,7 @@ class DecorationController extends Controller
 
         $decoration->save();
 
-        return redirect()->route('decoration.decoinput')->with('success', 'Decoration Added Successfully');
+        return redirect()->route('decoinput')->with('success', 'Decoration Added Successfully');
         //dd($request);
     }
 
