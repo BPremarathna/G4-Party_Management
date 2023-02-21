@@ -4,9 +4,9 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Auth;
- 
-class UserRoleMiddleware
+use Illuminate\Support\Facades\Auth;
+
+class AdminValidate
 {
     /**
      * Handle an incoming request.
@@ -15,12 +15,15 @@ class UserRoleMiddleware
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next, $role)
+    public function handle(Request $request, Closure $next)
     {
-        if(Auth()::check() && Auth()::user->role == $role)
-        {
-        return $next($request);
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        } else {
+            if (Auth::user()->role == 0){
+                return redirect()->route('home');
+            }
         }
-        return response()->json(["You don't have permission to access this page"])
+        return $next($request);
     }
 }
