@@ -129,10 +129,13 @@ Route::delete('/{gallery}', [App\Http\Controllers\GalleryController::class,'dest
 Route::get('/supplierManagement', [App\Http\Controllers\SupplierController::class, 'index'])->name('suppliershow');
 Route::get('/addsupplier', [App\Http\Controllers\SupplierController::class,'create'])->name('addsupplier');
 Route::get('show/{supplier}', [App\Http\Controllers\SupplierController::class,'show'])->name('supplier.show');
+Route::delete('/{supplier}', [App\Http\Controllers\SupplierController::class,'destroy'])->name('destroy');
 
 Route::get('/decoinput', [App\Http\Controllers\DecorationController::class,'create'])->name('decoinput');
 Route::get('/decoManagement', [App\Http\Controllers\DecorationController::class, 'index'])->name('decoshow');
 Route::get('show1/{decoration}', [App\Http\Controllers\DecorationController::class,'show'])->name('show1');
+Route::get('edit1/{decoration}', [App\Http\Controllers\DecorationController::class,'edit'])->name('edit1');
+Route::put('edit1/{decoration}', [App\Http\Controllers\DecorationController::class,'update'])->name('update');
 
 Route::get('/entertaininput', [App\Http\Controllers\EntertainmentController::class,'create'])->name('entertaininput');
 Route::get('/entertainManagement', [App\Http\Controllers\EntertainmentController::class, 'index'])->name('entertainshow');
@@ -142,6 +145,9 @@ Route::get('show2/{entertain}', [App\Http\Controllers\EntertainmentController::c
 Route::get('/cakeinput', [App\Http\Controllers\CakeController::class,'create'])->name('cakeinput');
 Route::get('/cakeManagement', [App\Http\Controllers\CakeController::class, 'index'])->name('cakeshow');
 Route::get('show4/{cake}', [App\Http\Controllers\CakeController::class,'show'])->name('show4');
+Route::get('edit4/{cake}', [App\Http\Controllers\CakeController::class,'edit'])->name('edit4');
+Route::put('edit4/{cake}', [App\Http\Controllers\CakeController::class,'update'])->name('update');
+Route::delete('/{cake}', [App\Http\Controllers\CakeController::class,'destroy'])->name('destroy');
 
 Route::get('/photoinput', [App\Http\Controllers\PhotographController::class,'create'])->name('photoinput');
 Route::get('/photoManagement', [App\Http\Controllers\PhotographController::class, 'index'])->name('photoshow');

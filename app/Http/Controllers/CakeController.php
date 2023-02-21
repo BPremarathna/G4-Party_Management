@@ -53,4 +53,41 @@ class CakeController extends Controller
         return view('cake.show4', compact('cake'));
 
     }
+
+    public function edit(Cake $cake) {
+        return view('cake.edit4',compact('cake'));
+    }
+
+    public  function update(Request $request, Cake $cake) {
+        $request->validate([
+            'cakeName' => 'required',
+            'cakeImage' => 'required',
+            'description' => 'required',
+            'unitPrice' => 'required' ,
+         ]);
+
+         $input = $request->all();
+
+         if($cakeImage = $request->file('image')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmHis') . "." .$cakeImage->getClientOriginalExtension();
+            $cakeImage->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+         }
+         else {
+            unset($input['image']);
+         }
+
+        $cake->update($input);
+
+        return redirect()->route('cakeshow')->with('success', 'Gallery Updated Successfully');
+
+    }
+
+
+    public function destroy(Cake $cake) {
+        $cake->delete();
+
+        return redirect()->route('cakeshow')->with('success', 'Gallery Deleted Successfully');
+    }
 }

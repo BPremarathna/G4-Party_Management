@@ -49,6 +49,15 @@ class SupplierController extends Controller
         return view('supplier.show', compact('supplier'));
 
     }
+    public function edit(Supplier $supplier) {
+        return view('supplier.edit',compact('gallery'));
+    }
+
+    public function destroy(Supplier $supplier) {
+        $supplier->delete();
+
+        return redirect()->route('suppliershow')->with('success', 'Gallery Deleted Successfully');
+    }
 
 
 

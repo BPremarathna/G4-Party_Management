@@ -52,7 +52,7 @@
             <td>
                 <form action="{{ route('destroy',$cake->id) }}" method="POST">
                     <a class="btn btn-info" href="{{ route('show4',$cake->id) }}">Show</a>
-                    <a class="btn btn-primary" href="">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('edit4', $cake->id) }}">Edit</a>
                     @csrf
                     @method('DELETE')
 

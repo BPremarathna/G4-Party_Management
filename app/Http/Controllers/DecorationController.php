@@ -57,5 +57,34 @@ class DecorationController extends Controller
 
     }
 
+    public function edit(Decoration $decoration) {
+        return view('decoration.edit1',compact('decoration'));
+    }
+
+    public  function update(Request $request, Decoration $decoration) {
+        $request->validate([
+            'decoName' => 'required',
+            'description' => 'required',
+            'unitPrice' => 'required' ,
+            'decoImage' => 'required',
+         ]);
+
+         $input = $request->all();
+
+         if($decoImage = $request->file('image')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmHis') . "." .$decoImage->getClientOriginalExtension();
+            $decoImage->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+         }
+         else {
+            unset($input['image']);
+         }
+
+        $decoration->update($input);
+
+        return redirect()->route('decoshow')->with('success', 'Gallery Updated Successfully');
+
+    }
 
 }
