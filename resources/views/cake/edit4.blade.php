@@ -20,31 +20,45 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Gallery </h2>
+                <h2>Edit Cake </h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('galleryshow') }}">Back</a>
+                <a class="btn btn-primary" href="{{ route('cakeshow') }}">Back</a>
             </div>
         </div>
     </div>
 
-    <form action="{{ route('update', $gallery->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('update', $cake->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Category:</strong>
-                    <input type="text" name="category" value="{{ $gallery->category }}" class="form-control" placeholder="Category">
+                    <strong>Cake Name:</strong>
+                    <input type="text" name="cakeName" value="{{ $cake->cakeName }}" class="form-control" placeholder="cakeName">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Image:</strong>
-                    <input type="file" name="galleryImage" class="form-control" placeholder="image">
-                    <img src="/images/{{ $gallery->galleryImage }}" width="100px">
+                    <strong>Description:</strong>
+                    <input type="text" name="description" value="{{ $cake->description }}" class="form-control" placeholder="description">
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Unit Price:</strong>
+                    <input type="text" name="unitPrice" value="{{ $cake->unitPrice }}" class="form-control" placeholder="unitPrice">
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Cake Image:</strong>
+                    <input type="file" name="cakeImage" class="form-control" placeholder="cakeimage">
+                    <img src="/images/{{ $cake->cakeImage }}" width="100px">
                 </div>
             </div>
 

@@ -52,7 +52,7 @@
             <td>
                 <form action="{{ route('destroy',$decoration->id) }}" method="POST">
                     <a class="btn btn-info" href="{{ route('show1',$decoration->id) }}">Show</a>
-                    <a class="btn btn-primary" href="">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('edit1',$decoration->id) }}">Edit</a>
                     @csrf
                     @method('DELETE')
 
