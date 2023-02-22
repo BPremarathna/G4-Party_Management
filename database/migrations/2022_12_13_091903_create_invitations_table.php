@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('type');
             $table->string('unitPrice');
             $table->string('cardImage');
-            $table->foreignId('suppliers_id')->constrained('suppliers');
+            $table->foreignId('suppliers_id')->references('id')->on('suppliers')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

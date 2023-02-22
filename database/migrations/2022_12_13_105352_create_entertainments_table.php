@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('unitPrice');
             $table->string('bandName');
             $table->string('bandImage');
-            $table->foreignId('suppliers_id')->constrained('suppliers');
+            $table->foreignId('suppliers_id')->references('id')->on('suppliers')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

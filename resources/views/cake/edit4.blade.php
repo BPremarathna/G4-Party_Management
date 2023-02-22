@@ -57,7 +57,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Cake Image:</strong>
-                    <input type="file" name="cakeImage" class="form-control" placeholder="cakeimage">
+                    <input type="file" name="cakeImage" class="form-control" placeholder="image">
                     <img src="/images/{{ $cake->cakeImage }}" width="100px">
                 </div>
             </div>

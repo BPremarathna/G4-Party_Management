@@ -8,12 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Hall extends Model
 {
     use HasFactory;
+    protected $guarded = [];
     protected $fillable = [
-        'hallImage'
+        'hallImage','hallName','description','capacity','unitPrice',
     ];
 
     public function venue()
     {
-        return $this->hasMeny(Venue::class);
+        return $this->belongsTo(Venue::class);
     }
 }
