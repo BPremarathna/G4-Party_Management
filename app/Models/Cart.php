@@ -9,13 +9,19 @@ class Cart extends Model
 {
     use HasFactory;
 
-    public function customer()
-    {
-        return $this->belongsTo(Customer::class);
-    }
+    const Type = [
+        'cake' => 1,
+        'decoration' => 2,
 
-    public function payment()
-    {
-        return $this->hasOne(Payment::class);
-    }
+    ];
+
+    protected $fillable = [
+        'product_id',
+        'type',
+        'customer_id',
+        'quantity',
+        'status',
+    ];
+
+
 }

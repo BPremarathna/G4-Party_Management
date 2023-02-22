@@ -48,14 +48,14 @@ class LoginController extends Controller
             ]);
             if(auth()->attempt(['email'=>$input["email"], 'password'=>$input['password']]))
             {
-                if(auth()->user->role == 'admin')
+                if(auth()->user->role == 1)
                 {
                     return redirect()->route('home.admin');
                 }
-                else if(auth()->user->role == 'editor')
-                {
-                    return redirect()->route('home.editor');
-                }
+                // else if(auth()->user->role == 'editor')
+                // {
+                //     return redirect()->route('home.editor');
+                // }
                 else
                 {
                     return redirect()->route('home');
