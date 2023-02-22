@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('venues', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('suppliers_id')->constrained('suppliers');
+            $table->foreignId('suppliers_id')->references('id')->on('suppliers')
+            ->onDelete('cascade');
             $table->string('venueName');
             $table->string('location');
             $table->string('venueImage');

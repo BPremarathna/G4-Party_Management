@@ -52,4 +52,10 @@ class InvitationController extends Controller
         return view('invitation.show6', compact('invitation'));
 
     }
+    public function destroy(Invitation $invitation) {
+
+        $invitation->delete();
+
+        return redirect()->route('cardshow')->with('success', 'Gallery Deleted Successfully');
+    }
 }

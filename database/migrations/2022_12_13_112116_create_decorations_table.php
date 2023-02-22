@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('description');
             $table->string('unitPrice');
             $table->string('decoImage');
-            $table->foreignId('suppliers_id')->constrained('suppliers');
+            $table->foreignId('suppliers_id')->references('id')->on('suppliers')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

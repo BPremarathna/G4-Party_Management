@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cake;
 use App\Models\Supplier;
 use Illuminate\Http\Request;
+use DB;
 
 class CakeController extends Controller
 {
@@ -86,6 +87,7 @@ class CakeController extends Controller
 
 
     public function destroy(Cake $cake) {
+
         $cake->delete();
 
         return redirect()->route('cakeshow')->with('success', 'Gallery Deleted Successfully');

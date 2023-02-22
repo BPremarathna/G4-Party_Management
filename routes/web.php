@@ -12,6 +12,8 @@ use App\Http\Controllers\DecorationController;
 use App\Http\Controllers\EntertainmentController;
 use App\Http\Controllers\CakeController;
 use App\Http\Controllers\PhotographController;
+use App\Http\Controllers\VenueController;
+use App\Http\Controllers\HallController;
 
 /*
 |--------------------------------------------------------------------------
@@ -133,6 +135,8 @@ Route::post('/store4',[App\Http\Controllers\CakeController::class,'store']);
 Route::post('/store5',[App\Http\Controllers\PhotographController::class,'store']);
 Route::post('/store6',[App\Http\Controllers\InvitationController::class,'store']);
 Route::post('/store7',[App\Http\Controllers\VenueController::class,'store']);
+Route::post('/store8',[App\Http\Controllers\HallController::class,'store']);
+Route::post('/store9',[App\Http\Controllers\MenuController::class,'store']);
 
 Route::get('/galleryManagement', [App\Http\Controllers\GalleryController::class, 'index'])->name('galleryshow');
 Route::get('/galleryinput', [App\Http\Controllers\GalleryController::class,'create'])->name('galleryinput');
@@ -147,11 +151,13 @@ Route::get('/addsupplier', [App\Http\Controllers\SupplierController::class,'crea
 Route::get('show/{supplier}', [App\Http\Controllers\SupplierController::class,'show'])->name('supplier.show');
 Route::delete('/{supplier}', [App\Http\Controllers\SupplierController::class,'destroy'])->name('destroy');
 
+
 Route::get('/decoinput', [App\Http\Controllers\DecorationController::class,'create'])->name('decoinput');
 Route::get('/decoManagement', [App\Http\Controllers\DecorationController::class, 'index'])->name('decoshow');
 Route::get('show1/{decoration}', [App\Http\Controllers\DecorationController::class,'show'])->name('show1');
 Route::get('edit1/{decoration}', [App\Http\Controllers\DecorationController::class,'edit'])->name('edit1');
 Route::put('edit1/{decoration}', [App\Http\Controllers\DecorationController::class,'update'])->name('update');
+
 
 Route::get('/entertaininput', [App\Http\Controllers\EntertainmentController::class,'create'])->name('entertaininput');
 Route::get('/entertainManagement', [App\Http\Controllers\EntertainmentController::class, 'index'])->name('entertainshow');
@@ -163,17 +169,28 @@ Route::get('/cakeManagement', [App\Http\Controllers\CakeController::class, 'inde
 Route::get('show4/{cake}', [App\Http\Controllers\CakeController::class,'show'])->name('show4');
 Route::get('edit4/{cake}', [App\Http\Controllers\CakeController::class,'edit'])->name('edit4');
 Route::put('edit4/{cake}', [App\Http\Controllers\CakeController::class,'update'])->name('update');
-Route::delete('/{cake}', [App\Http\Controllers\CakeController::class,'destroy'])->name('destroy');
+Route::delete('DEL/{cake}', [App\Http\Controllers\CakeController::class,'destroy'])->name('destroy');
+
 
 Route::get('/photoinput', [App\Http\Controllers\PhotographController::class,'create'])->name('photoinput');
 Route::get('/photoManagement', [App\Http\Controllers\PhotographController::class, 'index'])->name('photoshow');
 Route::get('show5/{photograph}', [App\Http\Controllers\PhotographController::class,'show'])->name('show5');
 
+
 Route::get('/cardinput', [App\Http\Controllers\InvitationController::class,'create'])->name('cardinput');
 Route::get('/cardManagement', [App\Http\Controllers\InvitationController::class, 'index'])->name('cardshow');
 Route::get('show6/{invitation}', [App\Http\Controllers\InvitationController::class,'show'])->name('show6');
+Route::delete('DEL/{invitation}', [App\Http\Controllers\InvitationController::class,'destroy'])->name('destroy');
+
+
 
 Route::get('/venueinput', [App\Http\Controllers\VenueController::class,'create'])->name('venueinput');
 Route::get('/venueManagement', [App\Http\Controllers\VenueController::class, 'index'])->name('venueshow');
 Route::get('show7/{venue}', [App\Http\Controllers\VenueController::class,'show'])->name('show7');
 
+
+Route::get('/hallinput', [App\Http\Controllers\HallController::class,'create'])->name('hallinput');
+Route::get('/hallManagement', [App\Http\Controllers\HallController::class, 'index'])->name('hallshow');
+
+
+Route::get('/menuinput', [App\Http\Controllers\MenuController::class,'create'])->name('menuinput');

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('capacity');
             $table->string('unitPrice');
             $table->string('hallImage');
-            $table->foreignId('venues_id')->constrained('venues');
+            $table->foreignId('venues_id')->references('id')->on('venues')->onDelete('cascade');
             $table->timestamps();
         });
     }

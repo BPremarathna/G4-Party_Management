@@ -9,11 +9,11 @@ class Menu extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'menuImage'
+        'menuImage','menuName','type','description','unitPrice','venueName'
     ];
 
     public function venue()
     {
-        return $this->hasMany(Venue::class);
+        return $this->belongsTo(Venue::class);
     }
 }
