@@ -72,10 +72,11 @@
                 </nav>
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4" style="border-color: #833948;">
-                        <h3 class="text-dark mb-0">Dashboard</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#" style="--bs-primary: #833948;--bs-primary-rgb: 131,57,72;--bs-info: #833948;--bs-info-rgb: 131,57,72;background: #833948;border-color: #833948;"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a>
-                    </div>
+                        <h3 class="text-dark mb-0">Dashboard</h3>
                 </div>
             </div>
+
+
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
                     <div class="text-center my-auto copyright"><span>Copyright © Brand 2022</span></div>
